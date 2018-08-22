@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.grishberg.constraintlayoutex.ConstraintLayoutEx
+    android:id="@+id/constraintRoot"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#7fff00">
+
+    <TextView
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="@string/app_name"
+        android:gravity="center_horizontal"
+        android:background="@android:color/white"
+        app:stretchable="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Some address line"/>
+
+    <ImageButton
+        android:id="@+id/button1"
+        android:layout_width="0dp"
+        android:layout_height="36dp"
+        android:layout_marginBottom="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginStart="4dp"
+        android:src="@android:drawable/ic_dialog_alert"
+        app:layout_constraintEnd_toStartOf="@+id/button2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText"/>
+
+    <ImageButton
+        android:id="@+id/button2"
+        android:layout_width="0dp"
+        android:layout_height="36dp"
+        android:layout_marginBottom="4dp"
+        android:src="@android:drawable/ic_dialog_email"
+        app:layout_constraintEnd_toStartOf="@+id/button3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/button1"
+        app:layout_constraintTop_toBottomOf="@+id/editText"/>
+
+    <ImageButton
+        android:id="@+id/button3"
+        android:layout_width="0dp"
+        android:layout_height="36dp"
+        android:layout_marginBottom="4dp"
+        android:src="@android:drawable/ic_dialog_dialer"
+        app:layout_constraintEnd_toStartOf="@+id/button4"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/button2"
+        app:layout_constraintTop_toBottomOf="@+id/editText"/>
+
+    <ImageButton
+        android:id="@+id/button4"
+        android:layout_width="0dp"
+        android:layout_height="36dp"
+        android:layout_marginBottom="4dp"
+        android:src="@android:drawable/ic_dialog_map"
+        app:layout_constraintEnd_toStartOf="@+id/button5"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/button3"
+        app:layout_constraintTop_toBottomOf="@+id/editText"/>
+
+    <ImageButton
+        android:id="@+id/button5"
+        android:layout_width="0dp"
+        android:layout_height="36dp"
+        android:layout_marginBottom="4dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:src="@android:drawable/ic_dialog_info"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/button4"
+        app:layout_constraintTop_toBottomOf="@+id/editText"/>
+</com.grishberg.constraintlayoutex.ConstraintLayoutEx>
