@@ -19,8 +19,9 @@ class ConstraintLayoutEx @JvmOverloads constructor(
     override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
         if (strategy != null) {
             strategy!!.onMeasure(this, widthMeasureSpec, heightMeasureSpec)
+        } else {
+            super.onMeasure(widthMeasureSpec, heightMeasureSpec)
         }
-        super.onMeasure(widthMeasureSpec, heightMeasureSpec)
     }
 
     internal fun measureChildWithMarginsEx(child: View, parentWidthMeasureSpec: Int, widthUsed: Int, parentHeightMeasureSpec: Int, heightUsed: Int) {

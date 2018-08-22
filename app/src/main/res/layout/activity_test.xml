@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal"
+    android:orientation="vertical"
     tools:context=".TestActivity">
 
     <Button
@@ -15,9 +15,21 @@
         android:text="inflate async"/>
 
     <Button
+        android:id="@+id/startInflateAsyncStrategy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="inflate async strategy"/>
+
+    <Button
         android:id="@+id/startInflateSync"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="inflate sync"/>
+
+    <Button
+        android:id="@+id/startInflateSyncStrategy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="inflate sync strategy"/>
 
 </LinearLayout>

@@ -15,14 +15,28 @@ class TestActivity : AppCompatActivity() {
 
         findViewById<View>(R.id.startInflateAsync).setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
-            intent.putExtra(EXTRA_INFLATE_MODE, true)
+            intent.putExtra(EXTRA_INFLATE_MODE, MODE_ASYNC_INFLATE)
+            overridePendingTransition(0, 0)
+            startActivity(intent)
+        }
+
+        findViewById<View>(R.id.startInflateAsyncStrategy).setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            intent.putExtra(EXTRA_INFLATE_MODE, MODE_ASYNC_INFLATE_WITH_STRATEGY)
             overridePendingTransition(0, 0)
             startActivity(intent)
         }
 
         findViewById<View>(R.id.startInflateSync).setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
-            intent.putExtra(EXTRA_INFLATE_MODE, false)
+            intent.putExtra(EXTRA_INFLATE_MODE, MODE_SYNC_INFLATE)
+            overridePendingTransition(0, 0)
+            startActivity(intent)
+        }
+
+        findViewById<View>(R.id.startInflateSyncStrategy).setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            intent.putExtra(EXTRA_INFLATE_MODE, MODE_SYNC_INFLATE_WITH_STRATEGY)
             overridePendingTransition(0, 0)
             startActivity(intent)
         }
